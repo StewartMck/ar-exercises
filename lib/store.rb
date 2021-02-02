@@ -6,7 +6,6 @@ class Store < ActiveRecord::Base
 
 
 def must_have_apparel
-  pp mens_apparel.methods
     if mens_apparel.blank? && womens_apparel.blank?
       errors.add(:base, message: "Store must sell apparel")
     end
